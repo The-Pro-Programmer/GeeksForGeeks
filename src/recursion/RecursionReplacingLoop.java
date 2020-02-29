@@ -1,20 +1,31 @@
 package recursion;
 
+import java.util.Scanner;
+
 public class RecursionReplacingLoop {
 
-	static int n = 10;
-	
-	public static void main(String[] args) {
-		print1toN(1);
-
-	}
-	
-	static void print1toN(int num) {
-		if(num<=n) {
-			System.out.print(num + " ");
-			num++;
-			print1toN(num);
-		}
-	}
+	/* Prints numbers from 1 to n */
+    static void printNos(int n)
+    {
+       if(n > 0) 
+       {
+           printNos(n-1);
+           System.out.print(n + " ");
+       }
+    }
+    
+    /* Driver program to test printNos */
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        
+        for(; t>0; t--)
+        {
+            int n = sc.nextInt();
+            printNos(n);
+            System.out.println();
+        }
+    }
 
 }
