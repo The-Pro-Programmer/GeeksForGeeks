@@ -26,6 +26,8 @@ public class RecursionReplacingLoop {
             printNos(n);
             System.out.println();
         }
+        
+        sc.close();
     }
 
 }
