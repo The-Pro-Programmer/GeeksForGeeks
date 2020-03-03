@@ -6,16 +6,30 @@ import java.util.Scanner;
 public class FibonacciPrograms {
 
 	public static void main(String[] args) {
-		/*Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
 		while(t>0){
-		    int num = sc.nextInt();
-		    System.out.println(getNthFiboChar(num));
+		    int len = sc.nextInt();
+		    for(int i=0; i<len; i++){
+		    	int n = sc.nextInt(); 
+		        BigInteger num = new BigInteger(""+n);
+		        boolean flag = isFibonacci(num);
+		        if(flag){
+		            System.out.print(num + " ");
+		        }
+		    }
+		    System.out.println();
 		    t--;
 		}
-		sc.close();*/
-		
-		printNFiboNums(new BigInteger("15"));
+		sc.close();
+	}
+	
+	static boolean isFibonacci(BigInteger num){
+	    Double res1 = Math.sqrt((5 * Math.pow(num.doubleValue(), 2)) + 4);
+	    Double res2 = Math.sqrt((5 * Math.pow(num.doubleValue(), 2)) - 4);
+	    boolean flag1 = (res1 - Math.floor(res1) ==0);
+	    boolean flag2 = (res2 - Math.floor(res2) ==0);
+	    return flag1 || flag2;
 	}
 	
 	//Given a positive integer N, print the Fibonacci series till the number N. 
