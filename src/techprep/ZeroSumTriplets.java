@@ -1,4 +1,4 @@
-package googlePreparation;
+package techprep;
 
 import java.util.Arrays;
 

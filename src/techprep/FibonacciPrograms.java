@@ -1,4 +1,4 @@
-package googlePreparation;
+package techprep;
 
 import java.math.BigInteger;
 import java.util.Scanner;
