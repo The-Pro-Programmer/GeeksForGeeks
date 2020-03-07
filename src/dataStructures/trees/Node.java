@@ -8,5 +8,8 @@ public class Node {
         data=d;
         left=right=null;
     }
+    Node(){
+    	left=right=null;
+    }
 
 }
